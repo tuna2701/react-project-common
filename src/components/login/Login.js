@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import './Login.scss'
 
 async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
+  return fetch(`http://localhost:8080/api/authenticate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export default function Login({ setToken }) {
     e.preventDefault();
     const token = await loginUser({
       username,
-      password,
+      password
     });
     setToken(token);
   };

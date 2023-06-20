@@ -16,7 +16,6 @@ function App() {
 
   // local language
   const lang = 'vi'
-
   // Check Login status
   // If isn't login and user request access to the admin page => redirect to '/login' (Login components)
   const currentUrl = window.location.pathname;
